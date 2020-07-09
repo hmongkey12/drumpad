@@ -62,3 +62,49 @@ h6 {
   top: 4%;
   left: 1%;
 }
+
+.pad-wrapper {
+  border: 2px solid black;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  border-radius: 10px;
+  left: 25%;
+  top: 12%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1% 0;
+}
+
+.pad {
+  box-shadow: inset 5px 5px 5px white, inset -5px -5px 5px white,
+    -5px 5px 15px black;
+  width: 22%;
+  height: 22%;
+  background: darkgray;
+  border-radius: 5px;
+  position: relative;
+}
+
+.pad-label {
+  display: flex;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 0.6em;
+  left: 0;
+  top: 100%;
+}
+
+.pad-label-left {
+  color: white;
+}
+
+.pad-label-right {
+  background: white;
+  display: inline-block;
+}
+
+.tapped {
+  box-shadow: inset 5px 5px 5px red, inset -5px -5px 5px red, -2px 2px 5px black;
+}
