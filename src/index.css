@@ -12,13 +12,17 @@ h6 {
   padding: 0;
 }
 
+audio {
+  display: none;
+}
+
 .wrapper {
   width: 800px;
   height: 800px;
   border-radius: 10px;
   background: #708090;
   position: absolute;
-  left: calc((100vw / 2) - 400px);
+  left: calc((100vw / 2) - 300px);
   top: calc((100vh / 2) - 400px);
   box-shadow: inset 10px 10px 5px silver, inset -10px -10px 5px silver;
 }
@@ -108,4 +112,12 @@ h6 {
 
 .tapped {
   box-shadow: inset 5px 5px 5px red, inset -5px -5px 5px red, -2px 2px 5px black;
+}
+
+.sound-select {
+  border: 1px solid black;
+  width: 160px;
+  position: absolute;
+  left: calc((100vw / 2) - 470px);
+  top: calc((100vh / 2) - 400px);
 }
