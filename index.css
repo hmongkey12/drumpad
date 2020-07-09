@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 800px;
+  height: 800px;
+  border-radius: 10px;
+  background: #708090;
+  position: absolute;
+  left: calc((100vw / 2) - 400px);
+  top: calc((100vh / 2) - 400px);
+  box-shadow: inset 10px 10px 5px silver, inset -10px -10px 5px silver;
+}
+
+.logo-name {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 5% auto;
+}
+
+.logo {
+  text-transform: uppercase;
+}
+
+.logo-top {
+  color: white;
+  letter-spacing: -1pt;
+}
+
+.logo-bottom {
+  background: white;
+  display: inline-block;
+  font-size: 0.6em;
+}
+
+.name {
+  position: relative;
+}
+
+.name-top {
+  color: white;
+  font-weight: 900;
+}
+
+.name-bottom {
+  font-weight: 100;
+  font-size: 1.8em;
+  position: absolute;
+  letter-spacing: 3pt;
+  top: 4%;
+  left: 1%;
+}
