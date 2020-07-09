@@ -1,8 +1,13 @@
 const pads: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(".pad");
+const audios: NodeListOf<HTMLAudioElement> = document.body.querySelectorAll(
+  "audio"
+);
 
-pads.forEach((item: HTMLDivElement) => {
+pads.forEach((item: HTMLDivElement, index: number) => {
   item.onclick = () => {
     item.classList.add("tapped");
+    audios[index].currentTime = 0;
+    audios[index].play();
   };
 });
 
@@ -17,9 +22,6 @@ const updateSounds = (): void => {
   const numOfSounds = 16;
   const sounds: NodeListOf<HTMLInputElement> = document.body.querySelectorAll(
     "input"
-  );
-  const audios: NodeListOf<HTMLAudioElement> = document.body.querySelectorAll(
-    "audio"
   );
   for (let i = 0; i < numOfSounds; i++) {
     if (sounds[i].value === "") {

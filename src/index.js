@@ -1,7 +1,10 @@
 var pads = document.body.querySelectorAll(".pad");
-pads.forEach(function (item) {
+var audios = document.body.querySelectorAll("audio");
+pads.forEach(function (item, index) {
     item.onclick = function () {
         item.classList.add("tapped");
+        audios[index].currentTime = 0;
+        audios[index].play();
     };
 });
 document.addEventListener("transitionend", function (e) {
@@ -13,7 +16,6 @@ document.addEventListener("transitionend", function (e) {
 var updateSounds = function () {
     var numOfSounds = 16;
     var sounds = document.body.querySelectorAll("input");
-    var audios = document.body.querySelectorAll("audio");
     for (var i = 0; i < numOfSounds; i++) {
         if (sounds[i].value === "") {
             audios[i].src = "../sounds/audio" + ("" + (i + 1)) + ".wav";

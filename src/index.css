@@ -74,7 +74,7 @@ audio {
   position: absolute;
   border-radius: 10px;
   left: 25%;
-  top: 12%;
+  top: 15%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -84,30 +84,79 @@ audio {
 .pad {
   box-shadow: inset 5px 5px 5px white, inset -5px -5px 5px white,
     -5px 5px 15px black;
-  width: 22%;
-  height: 22%;
+  width: 20%;
+  height: 20%;
   background: darkgray;
   border-radius: 5px;
   position: relative;
-  transition: 0.3s;
+  transition: 0.2s;
+  margin: 0 1% 1% 1%;
 }
 
 .pad-label {
   display: flex;
   position: absolute;
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: 0.5em;
+  width: 100%;
   left: 0;
   top: 100%;
+  margin-top: 6%;
 }
 
 .pad-label-left {
   color: white;
+  position: absolute;
+  width: 40%;
+  left: 5%;
 }
 
 .pad-label-right {
+  position: absolute;
   background: white;
   display: inline-block;
+  border-radius: 1px;
+  right: 5%;
+  top: 0;
+  padding: 0 1%;
+}
+
+.control-wrapper {
+  width: 25%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 3%;
+  top: 71%;
+}
+
+.control {
+  height: 40%;
+  width: 25%;
+  margin: 0 1%;
+}
+
+.control-button {
+  border-radius: 3px;
+  border: 2px solid black;
+  background: lightgrey;
+  height: 60%;
+  box-shadow: -2px 2px 5px black;
+}
+
+.control-label {
+  color: white;
+  font-size: 0.6em;
+  height: 40%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.full {
+  border: 1px solid black;
+  box-shadow: -2px 2px 5px red, 2px -2px 5px red, inset 18px 18px 15px red,
+    inset -18px -18px 15px red;
 }
 
 .tapped {
