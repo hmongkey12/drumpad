@@ -85,6 +85,7 @@ h6 {
   background: darkgray;
   border-radius: 5px;
   position: relative;
+  transition: 0.3s;
 }
 
 .pad-label {
