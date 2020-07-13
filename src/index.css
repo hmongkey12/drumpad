@@ -121,6 +121,61 @@ audio {
   padding: 0 1%;
 }
 
+.indicator-wrapper {
+  height: 5%;
+  width: 25%;
+  background: teal;
+}
+
+.indicator-top {
+  background: thistle;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.indicator-bottom {
+  background: thistle;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.indicator-light-label {
+  height: 100%;
+  width: 100%;
+}
+
+.indicator-light {
+  height: 24%;
+  width: 8%;
+  border-radius: 50px;
+  background: wheat;
+}
+
+.indicator-label {
+  background: lightcoral;
+  height: 30%;
+  width: 6%;
+  font-size: 0.6em;
+  text-align: center;
+  color: white;
+}
+
+.indicator-left {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 5%;
+  height: 10%;
+}
+
+.indicator-right {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  width: 5%;
+  height: 10%;
+}
+
 .control-wrapper {
   width: 25%;
   height: 20%;
