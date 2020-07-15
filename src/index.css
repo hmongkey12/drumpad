@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -122,21 +126,35 @@ audio {
 }
 
 .indicator-wrapper {
+  position: absolute;
   height: 5%;
   width: 25%;
   background: teal;
 }
 
-.indicator-top {
+.indicator-top-left {
   background: thistle;
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  left: 25%;
+  height: 30%;
+  width: 6%;
+}
+
+.indicator-top-right {
+  background: thistle;
+  position: absolute;
+  left: 50%;
+  height: 30%;
+  width: 6%;
 }
 
 .indicator-bottom {
   background: thistle;
-  height: 100%;
-  width: 100%;
+  left: 25%;
+  top: 75%;
+  position: absolute;
+  height: 30%;
+  width: 30%;
   display: flex;
 }
 
@@ -146,16 +164,16 @@ audio {
 }
 
 .indicator-light {
-  height: 24%;
-  width: 8%;
+  height: 100%;
+  width: 100%;
   border-radius: 50px;
   background: wheat;
 }
 
 .indicator-label {
   background: lightcoral;
-  height: 30%;
-  width: 6%;
+  height: 100%;
+  width: 100%;
   font-size: 0.6em;
   text-align: center;
   color: white;
@@ -164,15 +182,17 @@ audio {
 .indicator-left {
   border-left: 1px solid white;
   border-bottom: 1px solid white;
-  width: 5%;
-  height: 10%;
+  border-bottom-left-radius: 5px 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .indicator-right {
   border-right: 1px solid white;
   border-bottom: 1px solid white;
-  width: 5%;
-  height: 10%;
+  border-bottom-left-radius: 5px 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .control-wrapper {
