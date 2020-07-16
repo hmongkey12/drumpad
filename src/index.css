@@ -236,6 +236,7 @@ audio {
   border: 2px solid black;
   background: lightgrey;
   height: 60%;
+  transition: 0.2s;
   box-shadow: -2px 2px 5px black;
 }
 
@@ -251,6 +252,11 @@ audio {
   border: 1px solid black;
   box-shadow: -2px 2px 5px red, 2px -2px 5px red, inset 18px 18px 15px red,
     inset -18px -18px 15px red;
+}
+
+.control-tapped {
+  /* box-shadow: 0px 0px 5px black; */
+  box-shadow: -1px 0px 1px black;
 }
 
 .tapped {

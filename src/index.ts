@@ -2,6 +2,9 @@ const pads: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(".pad");
 const audios: NodeListOf<HTMLAudioElement> = document.body.querySelectorAll(
   "audio"
 );
+const controls: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(
+  ".control-button"
+);
 
 pads.forEach((item: HTMLDivElement, index: number) => {
   item.onclick = () => {
@@ -11,10 +14,19 @@ pads.forEach((item: HTMLDivElement, index: number) => {
   };
 });
 
+controls.forEach((item: HTMLDivElement, index: number) => {
+  item.onclick = () => {
+    item.classList.add("control-tapped");
+  };
+});
+
 document.addEventListener("transitionend", (e: TransitionEvent) => {
   const item = e.target as HTMLDivElement;
   if (item) {
     item.classList.remove("tapped");
+  }
+  if (item) {
+    item.classList.remove("control-tapped");
   }
 });
 
@@ -31,4 +43,5 @@ const updateSounds = (): void => {
     }
   }
 };
+
 updateSounds();

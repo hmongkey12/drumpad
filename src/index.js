@@ -1,5 +1,6 @@
 var pads = document.body.querySelectorAll(".pad");
 var audios = document.body.querySelectorAll("audio");
+var controls = document.body.querySelectorAll(".control-button");
 pads.forEach(function (item, index) {
     item.onclick = function () {
         item.classList.add("tapped");
@@ -7,10 +8,18 @@ pads.forEach(function (item, index) {
         audios[index].play();
     };
 });
+controls.forEach(function (item, index) {
+    item.onclick = function () {
+        item.classList.add("control-tapped");
+    };
+});
 document.addEventListener("transitionend", function (e) {
     var item = e.target;
     if (item) {
         item.classList.remove("tapped");
+    }
+    if (item) {
+        item.classList.remove("control-tapped");
     }
 });
 var updateSounds = function () {
