@@ -129,6 +129,21 @@ audio {
   position: absolute;
   height: 5%;
   width: 25%;
+  background: orange;
+}
+
+.indicator.left-half {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: teal;
+}
+
+.indicator.right-half {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 50%;
   background: teal;
 }
 
@@ -137,7 +152,7 @@ audio {
   position: absolute;
   left: 25%;
   height: 30%;
-  width: 6%;
+  width: 10%;
 }
 
 .indicator-top-right {
@@ -145,7 +160,7 @@ audio {
   position: absolute;
   left: 50%;
   height: 30%;
-  width: 6%;
+  width: 10%;
 }
 
 .indicator-bottom {
@@ -167,7 +182,12 @@ audio {
   height: 100%;
   width: 100%;
   border-radius: 50px;
-  background: wheat;
+  background: darkred;
+}
+
+.indicator-light-active {
+  box-shadow: -2px 2px 5px red, 2px -2px 5px red, inset 18px 18px 15px red,
+    inset -18px -18px 15px red;
 }
 
 .indicator-label {
@@ -190,7 +210,7 @@ audio {
 .indicator-right {
   border-right: 1px solid white;
   border-bottom: 1px solid white;
-  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
   width: 100%;
   height: 100%;
 }
