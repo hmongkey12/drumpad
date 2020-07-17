@@ -1,6 +1,14 @@
 var pads = document.body.querySelectorAll(".pad");
 var audios = document.body.querySelectorAll("audio");
 var controls = document.body.querySelectorAll(".control-button");
+var lights = document.body.querySelectorAll(".indicator-light");
+var controlBank = 0;
+var padBank = 2;
+lights.forEach(function (light, index) {
+    if (index % 2 === 0) {
+        light.classList.toggle("indicator-light-active");
+    }
+});
 pads.forEach(function (item, index) {
     item.onclick = function () {
         item.classList.add("tapped");
@@ -10,6 +18,14 @@ pads.forEach(function (item, index) {
 });
 controls.forEach(function (item, index) {
     item.onclick = function () {
+        if (index === 0) {
+            controlBank += 1;
+            lights[Math.floor(controlBank % 2)].classList.toggle("indicator-light-active");
+        }
+        else if (index === 2) {
+            padBank += 1;
+            lights[Math.floor(padBank % 4)].classList.toggle("indicator-light-active");
+        }
         item.classList.add("control-tapped");
     };
 });

@@ -5,6 +5,18 @@ const audios: NodeListOf<HTMLAudioElement> = document.body.querySelectorAll(
 const controls: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(
   ".control-button"
 );
+const lights: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(
+  ".indicator-light"
+);
+
+let controlBank = 0;
+let padBank = 2;
+
+lights.forEach((light: HTMLDivElement, index: number) => {
+  if (index % 2 === 0) {
+    light.classList.toggle("indicator-light-active");
+  }
+});
 
 pads.forEach((item: HTMLDivElement, index: number) => {
   item.onclick = () => {
@@ -16,6 +28,17 @@ pads.forEach((item: HTMLDivElement, index: number) => {
 
 controls.forEach((item: HTMLDivElement, index: number) => {
   item.onclick = () => {
+    if (index === 0) {
+      controlBank += 1;
+      lights[Math.floor(controlBank % 2)].classList.toggle(
+        "indicator-light-active"
+      );
+    } else if (index === 2) {
+      padBank += 1;
+      lights[Math.floor(padBank % 4)].classList.toggle(
+        "indicator-light-active"
+      );
+    }
     item.classList.add("control-tapped");
   };
 });
