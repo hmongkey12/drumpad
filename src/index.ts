@@ -9,12 +9,12 @@ const lights: NodeListOf<HTMLDivElement> = document.body.querySelectorAll(
   ".indicator-light"
 );
 
-let controlBank = 0;
-let padBank = 2;
+let currentControlBank = 1;
+let currentPadBank = 1;
 
 lights.forEach((light: HTMLDivElement, index: number) => {
   if (index % 2 === 0) {
-    light.classList.toggle("indicator-light-active");
+    // light.classList.toggle("indicator-light-active");
   }
 });
 
@@ -29,15 +29,35 @@ pads.forEach((item: HTMLDivElement, index: number) => {
 controls.forEach((item: HTMLDivElement, index: number) => {
   item.onclick = () => {
     if (index === 0) {
-      controlBank += 1;
-      lights[Math.floor(controlBank % 2)].classList.toggle(
-        "indicator-light-active"
-      );
+      currentControlBank += 1;
+      if (currentControlBank > 3) {
+        currentControlBank = 1;
+      }
+      if (currentControlBank == 3) {
+        lights[0].classList.add("indicator-light-active");
+        lights[1].classList.add("indicator-light-active");
+      } else if (currentControlBank == 1) {
+        lights[0].classList.remove("indicator-light-active");
+        lights[1].classList.add("indicator-light-active");
+      } else if (currentControlBank == 2) {
+        lights[0].classList.add("indicator-light-active");
+        lights[1].classList.remove("indicator-light-active");
+      }
     } else if (index === 2) {
-      padBank += 1;
-      lights[Math.floor(padBank % 4)].classList.toggle(
-        "indicator-light-active"
-      );
+      currentPadBank += 1;
+      if (currentPadBank > 3) {
+        currentPadBank = 1;
+      }
+      if (currentPadBank == 3) {
+        lights[2].classList.add("indicator-light-active");
+        lights[3].classList.add("indicator-light-active");
+      } else if (currentPadBank == 1) {
+        lights[2].classList.remove("indicator-light-active");
+        lights[3].classList.add("indicator-light-active");
+      } else if (currentPadBank == 2) {
+        lights[2].classList.add("indicator-light-active");
+        lights[3].classList.remove("indicator-light-active");
+      }
     }
     item.classList.add("control-tapped");
   };
