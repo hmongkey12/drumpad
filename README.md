@@ -14,3 +14,5 @@ I have included the index.js file for ease of use.
 #### Usage
 
 Add your audio files to the sounds folder. Type it into the input box corresponding to the pad number and click update sounds.
+
+![](./demo/drumpad.gif)
